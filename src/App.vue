@@ -29,6 +29,8 @@
                 </svg>
             </button>
         </div>
+
+        <v-idle :duration="10" :events="['click', 'touchstart', 'touchmove', 'touchend', 'mousemove', 'scroll']" @idle="goHome()" />
     </div>
 </template>
 
@@ -166,7 +168,9 @@
                 this.$refs.flipbook.flipRight()
             },
             goHome() {
-                this.$refs.flipbook.goToPage(0)
+                if(this.$refs.flipbook.currentPage > 0) {
+                    this.$refs.flipbook.goToPage(0)
+                }
             },
         },
         components: {
