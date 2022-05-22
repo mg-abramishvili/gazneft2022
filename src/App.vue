@@ -30,7 +30,7 @@
             </button>
         </div>
 
-        <v-idle :duration="10" :events="['click', 'touchstart', 'touchmove', 'touchend', 'mousemove', 'scroll']" @idle="goHome()" />
+        <v-idle :duration="60" :events="['click', 'touchstart', 'touchmove', 'touchend', 'mousemove', 'scroll']" @idle="goHome()" />
     </div>
 </template>
 
